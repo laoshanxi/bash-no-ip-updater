@@ -27,6 +27,11 @@ Run script once each day at 5:30am:
 Run the script every fifteen minutes:  
 `*/15 * * * * /path/to/noipupdater.sh`
 
+Reg to appmanager to run every 5 minutes
+```
+appc reg -n noipupdater -c 'sh /opt/bash-no-ip-updater/noipupdater.sh -c ./config' -w /opt/bash-no-ip-updater/ -i 300
+```
+
 Note: This is a bash script, so you may need to specify `SHELL=/bin/bash` in crontab.
 
 ## Credits
